@@ -1,0 +1,30 @@
+.feedback-rate {
+  --star-size: 40px;
+  --star-color: #ccc; /* Колір порожніх зірок */
+  --star-background: #ffb400; /* Колір заповнених зірок (золотистий) */
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; /* Зірочки в різних шрифтах виглядають інакше */
+  line-height: 1;
+}
+
+.feedback-rate::after {
+  content: '★★★★★';
+  letter-spacing: 2px;
+
+  /* Створюємо градієнт: частина золота, частина сіра */
+  background: linear-gradient(
+    90deg,
+    var(--star-background) var(--rating-percent),
+    var(--star-color) var(--rating-percent)
+  );
+
+  /* Маскуємо текст (зірочки) фоном */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Робимо самі символи прозорими, щоб було видно градієнт за ними */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

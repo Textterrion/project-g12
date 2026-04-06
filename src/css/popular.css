@@ -1,0 +1,132 @@
+.section-pop {
+  padding: 48px 0;
+}
+
+.popular-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.popular-list {
+  margin-bottom: 48px;
+}
+
+.swiper-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+#popular-pagination {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  transform: none;
+}
+
+#popular-pagination .swiper-pagination-bullet-active {
+  background: #080C09;
+}
+
+#popular-navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.popular-button-prev,
+.popular-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(8, 12, 9, 0.05);
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  padding: 12px;
+  transition: opacity 250ms ease;
+}
+
+.popular-button-prev:hover,
+.popular-button-next:hover,
+.popular-button-prev:focus,
+.popular-button-next:focus {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.popular-button-prev.swiper-button-disabled,
+.popular-button-next.swiper-button-disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.popular-list .popular-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popular-img {
+  border-radius: 8px;
+}
+
+.popular-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popular-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.popular-colors {
+  display: flex;
+  gap: 16px;
+}
+
+.popular-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.popular-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.popular-btn {
+  border-radius: 100px;
+  padding: 10px 24px;
+  border: none;
+  background-color: rgba(8, 12, 9, 0.05);
+  line-height: 1.6;
+  font-weight: 500;
+  box-shadow:
+        0 1px 2px 0 rgba(8, 12, 9, 0.05),
+        inset 0 -2px 1px 0 rgba(8, 12, 9, 0.05),
+        inset 0 0 0 1px rgba(8, 12, 9, 0.05);
+  transition: opacity 250ms ease;
+}
+
+.popular-btn:hover,
+.popular-btn:focus {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1440px) {
+  .popular-title {
+    font-size: 48px;
+  }
+}

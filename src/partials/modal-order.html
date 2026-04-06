@@ -1,0 +1,24 @@
+<div class="modal modal-order" role="dialog" aria-modal="true" aria-labelledby="furnitureModalTitle">
+  <div class="container">
+    <div class="modal-content">
+      <!-- start render func injection  -->
+      <button class="modal-close-btn-order" aria-label="Close furniture details modal">
+        <svg width="48" height="48">
+          <use href="/img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <h2>Замовити</h2>
+      <div class="order-info"></div>
+      <form class="order-details">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments"></textarea>
+          <button type="submit">Submit Order</button>
+      </form>
+      <!-- end render func injection  -->
+    </div>
+  </div>
+</div>

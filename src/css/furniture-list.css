@@ -1,0 +1,270 @@
+.modal-furniture-rate {
+  --star-size: 40px;
+  --star-color: #ccc; /* Колір порожніх зірок */
+  --star-background: #ffb400; /* Колір заповнених зірок (золотистий) */
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; /* Зірочки в різних шрифтах виглядають інакше */
+  line-height: 1;
+}
+
+.modal-furniture-rate::after {
+  content: '★★★★★';
+  letter-spacing: 2px;
+
+  /* Створюємо градієнт: частина золота, частина сіра */
+  background: linear-gradient(
+    90deg,
+    var(--star-background) var(--rating-percent),
+    var(--star-color) var(--rating-percent)
+  );
+
+  /* Маскуємо текст (зірочки) фоном */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Робимо самі символи прозорими, щоб було видно градієнт за ними */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.section-furniture-list {
+  padding: 48px 0;
+}
+
+.title-furniture {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.second-title-furniture {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.filter {
+  margin-top: 40px;
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filter-item {
+}
+
+.filter-btn {
+  border: none;
+  border-radius: 8px;
+  width: 159px;
+  height: 122px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #fff;
+}
+
+.filter-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 8px #6b0609;
+}
+
+.filter-all {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/img/categories/1.2x.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.filter-soft {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/img/categories/2.2x.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.filter-cupboard {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/img/categories/3.2x.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.filter-bed {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/img/categories/4.2x.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-gallery {
+  margin-top: 40px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card-list-item {
+}
+
+.card-img-placeholder {
+  border-radius: 8px;
+  width: 335px;
+  height: 277px;
+  background-color: #ccc;
+}
+
+.card-content {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.card-colors {
+  margin-top: 8px;
+  display: flex;
+  gap: 16px;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.card-price {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.card-btn {
+  margin-top: 16px;
+  border-radius: 100px;
+  padding: 10px 24px;
+  width: 100%;
+  height: 46px;
+  border: none;
+  box-shadow:
+    0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(8, 12, 9, 0.05),
+    inset 0 0 0 1px rgba(8, 12, 9, 0.05);
+
+  background: rgba(8, 12, 9, 0.05);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #080c09;
+}
+
+.card-btn:hover,
+.card-btn:focus {
+  box-shadow:
+    0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(8, 12, 9, 0.05),
+    inset 0 0 0 1px rgba(8, 12, 9, 0.05);
+  background: rgba(8, 12, 9, 0.05);
+  opacity: 0.5;
+  outline: none;
+}
+
+.more-btn {
+  margin-top: 32px;
+  border-radius: 100px;
+  padding: 10px 24px;
+  width: 100%;
+  height: 46px;
+  border: none;
+  box-shadow:
+    0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: rgba(107, 6, 9, 1);
+  color: #fff;
+}
+
+.more-btn:focus,
+.more-btn:hover {
+  box-shadow:
+    0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6b0609;
+  opacity: 0.5;
+  outline: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .filter-list {
+    gap: 24px;
+  }
+
+  .filter-btn {
+    width: 158px;
+  }
+
+  .card-img-placeholder {
+    width: 340px;
+    height: 277px;
+  }
+
+  .more-btn {
+    display: block;
+    width: 340px;
+    margin: 32px auto 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section-furniture-list {
+    padding: 80px 0;
+  }
+
+  .title-furniture {
+    font-size: 48px;
+  }
+
+  .filter-btn {
+    width: 166px;
+  }
+
+  .card-img-placeholder {
+    width: 310px;
+    height: 257px;
+  }
+
+  .more-btn {
+    width: 421px;
+  }
+}

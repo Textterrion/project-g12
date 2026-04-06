@@ -1,0 +1,34 @@
+body {
+  font-family: 'Raleway', 'IBM Plex Sans', sans-serif;
+  background-color: #fff;
+  color: #080c09;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a,
+button,
+svg,
+input,
+input::placeholder {
+  transition-duration: 250ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

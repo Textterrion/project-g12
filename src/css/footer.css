@@ -1,0 +1,146 @@
+.footer {
+  display: flex;
+  padding: 0 32px;
+  background-color: #6B0609;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+.social-footer.desktop-position {
+  display: none;
+}
+.footer .container {
+  flex-direction: column;
+
+}
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-logo-img {
+  width: 228px;
+  height: 97px;
+  filter: brightness(0) invert(1);
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+.social-footer-li{
+  position: relative;
+  outline:none;
+
+}
+.social-footer {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+.social-footer-wrapper {
+  margin: 0 auto;
+}
+.icon-footer{
+  fill: #FFFFFF;
+  width: 24px;
+  height: 24px
+}
+.rights{
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  padding-bottom: 32px;
+  order: 10;
+}
+@media only screen and (min-width: 768px) {
+  .footer .container {
+    width: 100%;
+  }
+  .footer-logo-img{
+    display: block;
+    margin: 0 auto;
+  }
+  .nav-footer-wrapper {
+    padding-top: 24px ;
+  }
+  .nav-footer {
+    flex-direction: row;
+  }
+  .icon-footer {
+    width: 24px;
+    height: 24px;
+  }
+  .social-footer{
+    gap: 32px;
+  }
+  .social-footer-link {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+.rights {
+    margin-bottom: 0;
+    order: 10;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer .container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo{
+    order: 1;
+  }
+  .icon-footer {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-footer-link {
+    width: 24px;
+    height: 24px;
+  }
+  .social-footer{
+    margin: 0;
+
+  }
+  .social-footer-wrapper {
+    margin: 0;
+    order: 10;
+  }
+
+  .social-footer.desktop-position {
+    display: flex;
+    justify-content: right;
+  }
+  .nav-footer-wrapper{
+    padding: 0;
+    order: 3;
+  }
+
+  .rights{
+    margin: 0;
+    padding: 0;
+    order: 2;
+  }
+
+}
