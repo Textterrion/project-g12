@@ -129,16 +129,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const result = {
       name: formData.get('name'),
       phone: formData.get('phone'),
-      comments: formData.get('comments'),
-      product: {
-        id: orderInfoContainer.querySelector('.order-preview').dataset
-          .productId,
-        name: orderInfoContainer.querySelector('h3').textContent,
-        price: orderInfoContainer
-          .querySelector('.order-price')
-          .textContent.replace('До сплати: ', '')
-          .replace(' грн', ''),
-      },
+      comment: formData.get('comments'),
+      modelId: orderInfoContainer.querySelector('.order-preview').dataset.productId,
+      color: formData.get('color'),
     };
 
     postOrder(result);

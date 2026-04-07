@@ -82,14 +82,12 @@ export function renderProductDetails(product) {
     <p class="modal-price">${product.price} грн</p>
     <span class="modal-furniture-rate" data-rate="${product.rate}" style="--rating-percent: ${product.rate * 20}%"></span>
     <div class="modal-colors">
-       ${product.color.map(c => `<span class="color-dot" style="background-color: ${c}"></span>`).join('')}
+       ${product.color.map(c => `<input type="radio" class="color-dot" name="color" value="${c}" style="background-color: ${c}"></input>`).join('')}
     </div>
     <p class="modal-description">${product.description || ''}</p>
     <button class="add-to-cart-btn"
             data-product-id="${product._id}"
-            data-product-name="${product.name}"
-            data-product-price="${product.price}"
-            data-product-img="${product.images[0]}">
+            data-product-color="${product.color[0]}"
       Перейти до замовлення
     </button>
   `;
