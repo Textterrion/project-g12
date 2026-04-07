@@ -7,14 +7,13 @@ import {
   fetchProducts,
   fetchProductsByCategory,
   fetchProductById,
+  postOrder,
 } from './fetch.js';
 import {
   renderCategories,
   renderProducts,
   renderProductDetails,
 } from './render-furnitures-block.js';
-
-
 
 // Глобальний стан
 let currentPage = 1;
@@ -56,7 +55,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const addToCartBtn = event.target.closest('.add-to-cart-btn');
     if (!addToCartBtn) return;
 
-    const { productId, productName, productPrice, productImg } = addToCartBtn.dataset;
+    const { productId, productName, productPrice, productImg } =
+      addToCartBtn.dataset;
 
     modalFurniture.classList.remove('is-open'); // Закриваємо першу
 
@@ -131,14 +131,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       phone: formData.get('phone'),
       comments: formData.get('comments'),
       product: {
-        id: orderInfoContainer.querySelector('.order-preview').dataset.productId,
+        id: orderInfoContainer.querySelector('.order-preview').dataset
+          .productId,
         name: orderInfoContainer.querySelector('h3').textContent,
-        price: orderInfoContainer.querySelector('.order-price').textContent.replace('До сплати: ', '').replace(' грн', ''),
+        price: orderInfoContainer
+          .querySelector('.order-price')
+          .textContent.replace('До сплати: ', '')
+          .replace(' грн', ''),
       },
     };
 
-    // Вивід у консоль
-    console.log('Дані замовлення:', result);
+    postOrder(result);
+    console.log('Order submitted:', result);
 
     // Повідомлення користувачу
     iziToast.success({

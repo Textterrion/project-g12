@@ -99,3 +99,17 @@ export async function fetchFeedbacks() {
     throw error;
   }
 }
+
+export async function postOrder(orderData) {
+  try {
+    const response = await apiFetch.post('/orders', orderData);
+    return response.data;
+  } catch (error) {
+    console.error('Error posting order:', error);
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to submit order. Please try again later.',
+    });
+    throw error;
+  }
+}
