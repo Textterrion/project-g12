@@ -14,6 +14,8 @@ import {
   renderProductDetails,
 } from './render-furnitures-block.js';
 
+
+
 // Глобальний стан
 let currentPage = 1;
 const itemsPerPage = 8;

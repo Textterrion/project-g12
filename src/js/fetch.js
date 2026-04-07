@@ -26,9 +26,9 @@ export async function fetchCategories() {
   }
 }
 
-export async function fetchProducts() {
+export async function fetchProducts(page = 1, limit = 8) {
   try {
-    const response = await apiFetch.get('/furnitures?limit=8');
+    const response = await apiFetch.get(`/furnitures?limit=${limit}&page=${page}`);
     return response.data.furnitures;
   } catch (error) {
     console.error('Error fetching products:', error);
